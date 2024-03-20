@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTH CENTRE</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>INFORMATION FOR REFERRAL</h1>
+    
+    <form action="code.php" method="post" id="referralForm">
+        <div class="form-group">
+            <label for="fullname">Fullname:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" name="department" id="department" placeholder="Department" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" name="gender" id="gender" placeholder="Gender" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" name="age" id="age" placeholder="Age" required>
+        </div>
+        <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <input type="text" name="occupation" id="occupation" placeholder="Occupation" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="clinicNumber">Clinic/Hospital Number:</label>
+            <input type="text" name="clinicNumber" id="clinicNumber" placeholder="Clinic/Hospital Number" required>
+        </div>
+        <div class="form-group">
+            <label for="complication">Present Complications:</label>
+            <input type="text" name="complications" id="complication" placeholder="Present Complications" required>
+        </div>
+        <div class="form-group">
+            <label for="diagnosis">Diagnosis:</label>
+            <input type="text" name="diagnosis" id="diagnosis" placeholder="Diagnosis" required>
+        </div>
+        <div class="form-group">
+            <label for="prescribed">Drugs Prescribed:</label>
+            <input type="text" name="prescribed" id="prescribed" placeholder="Drugs Prescribed" required>
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason for Referral:</label>
+            <input type="text" name="reason" id="reason" placeholder="Reason for Referral" required>
+        </div>
+        <button type="submit" href="patient.html" value="submit" class="submit" name="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('referralForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                this.submit();
+            }
+        });
+
+        function validateForm() {
+            // Your validation logic here
+            return true; // Placeholder return for now
+        }
+    </script>
+</body>
+</html>
